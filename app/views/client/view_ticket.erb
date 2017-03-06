@@ -1,0 +1,33 @@
+<div class='container'>
+    <div class='jumbotron'>
+        <h1>Hello, <%= @ticket.name %></h1>
+        <p>
+            Your ticket status is 
+            <b class='text-success'>
+                Open
+            </b>
+        </p>
+        <a href='/close-ticket' class='btn btn-danger'>
+            Close This Ticket
+        </a>
+    </div>
+    <% if(@staff_has_responded) %>
+        
+    <% else %>
+        <div class='jumbotron'>
+            <h3>
+                A staff member has not yet responsed to this ticket. 
+            </h3>
+        </div>
+    <% end %>
+    <div class='panel panel-default'>
+        <div class='panel-body'>
+            <p>The issue is regarding</p>
+            <input type='text' value='<%= @ticket.product %>' class='form-control' readOnly>
+            <p>You Wrote - </p>
+            <textarea class='form-control' readOnly>
+                <%= @ticket.issue %>
+            </textarea>
+        </div>
+    </div>
+</div>

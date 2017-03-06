@@ -1,0 +1,46 @@
+<div class='container'>
+    <div class='jumbotron'>
+        <h1 class='text-center'>Open a new ticket</h1>
+    </div>
+    <div class='panel panel-default'> 
+        <div class='panel-body'>
+            <form action='/open-ticket'>
+                <h4>
+                    Your Details
+                </h4>
+                <div class='row'>
+                    <div class='col-md-6'>
+                        <div class='form-group'>
+                            <lable>Name</lable>
+                            <input type='text' name='name' class='form-control'>
+                        </div>  
+                    </div>
+                    <div class='col-md-6'>
+                        <div class='form-group'>
+                            <lable>Email</lable>
+                            <input type='email' name='email' class='form-control'>
+                        </div>  
+                    </div>
+                    <div class='col-md-12'>
+                        <h4>
+                            The Problem You Are Having
+                        </h4>
+                        <div class='form-group'>
+                            <lable>What is the product or service?</lable>
+                            <input type='text' name='product' class='form-control'>
+                        </div>
+                    </div>
+                    <div class='col-md-12'>
+                        <div class='form-group'>
+                            <lable>
+                                Describe Your Issue
+                            </lable>
+                            <textarea name='issue' class='form-control'></textarea>
+                        </div>
+                        <input type='submit' class='btn btn-success pull-right' value='Submit Ticket'>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

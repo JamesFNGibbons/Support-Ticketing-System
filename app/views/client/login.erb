@@ -1,0 +1,32 @@
+<div class='container'>
+    <div class='col-md-4 col-md-offset-4'>
+        <div class='panel panel-default'>
+            <div class='panel-body'>
+                <h1 class='text-center'>Ticket Login</h1>
+                <form>
+                    <div class='form-group'>
+                        <form action='/login'>
+                            <% if(@invalid_ticket || @ticket_is_closed) %>
+                            <div class='form-group has-error'>
+                                <% if(@ticket_is_closed) %>
+                                    <lable>This ticket has been closed.</lable>
+                                <% end %>
+                                <% if(@invalid_ticket) %>
+                                    <lable>Invalid Ticket ID</lable>
+                                <% end %>
+                                <input type='text' name='ticket_id' class='form-control input-lg'>
+                            </div>
+                            <% else %>
+                            <div class='form-group has-error'>
+                                <lable>Enter Your Ticket ID</lable>
+                                <input type='text' name='ticket_id' class='form-control input-lg'>
+                            </div>
+                            <% end %>
+                            <input type='submit' class='btn btn-success form-control' value='Login'>
+                        </form>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
